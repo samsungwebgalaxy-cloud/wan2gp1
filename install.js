@@ -35,6 +35,15 @@ module.exports = {
       }
     },
     {
+      "when": "{{platform === 'win32' && gpu === 'amd'}}",
+      method: "shell.run",
+      params: {
+        venv: "env",
+        path: "app",
+        message: "uv pip install numpy==1.26.4"
+      }
+    },
+    {
       method: "notify",
       params: {
         html: "Installation completed"
