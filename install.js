@@ -35,7 +35,7 @@ module.exports = {
       }
     },
     {
-      "when": "{{platform === 'win32' && gpu === 'amd'}}",
+      when: "{{platform === 'win32' && gpu === 'amd'}}",
       method: "shell.run",
       params: {
         venv: "env",
