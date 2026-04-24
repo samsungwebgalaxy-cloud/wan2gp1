@@ -74,6 +74,7 @@ module.exports = {
       "when": "{{platform === 'win32' && gpu === 'amd'}}",
       "method": "shell.run",
       "params": {
+        "bluefairy": "off",
         "env": { "UV_SKIP_WHEEL_FILENAME_CHECK": "1" },
         "venv_python": "{{args && args.venv_python ? args.venv_python : null}}",
         "venv": "{{args && args.venv ? args.venv : null}}",
@@ -91,6 +92,7 @@ module.exports = {
       "when": "{{platform === 'linux' && gpu === 'nvidia' && kernel.gpu_model && / (10|16)\\d+/.test(kernel.gpu_model)}}",
       "method": "shell.run",
       "params": {
+        "bluefairy": "off",
         "venv_python": "{{args && args.venv_python ? args.venv_python : null}}",
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
@@ -106,6 +108,7 @@ module.exports = {
       "when": "{{platform === 'linux' && gpu === 'nvidia' && kernel.gpu_model && / 20.+/.test(kernel.gpu_model)}}",
       "method": "shell.run",
       "params": {
+        "bluefairy": "off",
         "venv_python": "{{args && args.venv_python ? args.venv_python : null}}",
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
@@ -123,6 +126,7 @@ module.exports = {
       "when": "{{platform === 'linux'}}",
       "method": "shell.run",
       "params": {
+        "bluefairy": "off",
         "venv_python": "{{args && args.venv_python ? args.venv_python : null}}",
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
@@ -143,6 +147,7 @@ module.exports = {
       "when": "{{platform === 'linux'}}",
       "method": "shell.run",
       "params": {
+        "bluefairy": "off",
         "venv_python": "{{args && args.venv_python ? args.venv_python : null}}",
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
@@ -161,6 +166,7 @@ module.exports = {
       "when": "{{platform === 'linux' && gpu === 'amd'}}",
       "method": "shell.run",
       "params": {
+        "bluefairy": "off",
         "venv_python": "{{args && args.venv_python ? args.venv_python : null}}",
         "venv": "{{args && args.venv ? args.venv : null}}",
         "path": "{{args && args.path ? args.path : '.'}}",
